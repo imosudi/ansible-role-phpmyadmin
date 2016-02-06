@@ -18,5 +18,9 @@
     name: phpmyadmin
     install_recommends: no
 
-- name: Installing python-mysqld
-  apt: name=python-mysqldb
+- name: Installing helper tools
+  apt:
+    name: "{{ item }}"
+  with_items:
+    - python-mysqldb
+    - mysql-client
