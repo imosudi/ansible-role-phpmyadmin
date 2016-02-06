@@ -9,30 +9,36 @@ Role Variables
 --------------
 
 User for database
-    phpmyadmin_control_user: phpmyadmin
+
+    phpmyadmin_user: phpmyadmin
 
 Password for database
-    phpmyadmin_control_password: False
+
+    phpmyadmin_password: False
 
 Host which should run the WebGUI
-    phpmyadmin_control_server: "{{ inventory_hostname }}"
+
+    phpmyadmin_server: "{{ inventory_hostname }}"
 
 MySQL server IP
-    phpmyadmin_control_server_ip: "localhost"
+
+    phpmyadmin_server_ip: "localhost"
 
 WebGUI IP
-    phpmyadmin_control_client_ip: "localhost"
+
+    phpmyadmin_client_ip: "localhost"
     
 Database:
-    phpmyadmin_control_database: phpmyadmin
+
+    phpmyadmin_database: phpmyadmin
 Example Playbook
 ----------------
 
     - hosts: appservers
       vars:
-        phpmyadmin_control_password: "mySecret"
-        phpmyadmin_control_server_ip: "10.0.3.2"
-        phpmyadmin_control_client_ip: "10.0.3.1"
+        phpmyadmin_password: "mySecret"
+        phpmyadmin_server_ip: "10.0.3.2"
+        phpmyadmin_client_ip: "10.0.3.1"
       roles:
         - phpmyadmin
 License
