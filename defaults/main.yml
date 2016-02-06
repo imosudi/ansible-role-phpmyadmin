@@ -1,0 +1,6 @@
+phpmyadmin_user: phpmyadmin
+phpmyadmin_password: False
+phpmyadmin_server: "{{ inventory_hostname }}"
+phpmyadmin_server_ip: "localhost"
+phpmyadmin_client_ip: "localhost"
+phpmyadmin_database: phpmyadmin

@@ -1,0 +1,6 @@
+- name: Linking configuration for apache2
+  file:
+    src: /etc/phpmyadmin/apache.conf
+    dest: /etc/apache2/conf-enabled/phpmyadmin.conf
+    state: link
+  notify: apache2 reload

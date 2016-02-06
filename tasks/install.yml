@@ -1,0 +1,19 @@
+---
+# Install file for phpmyadmin
+- name: Installing dbconfig-common
+  apt:
+    name: dbconfig-common
+    install_recommends: no
+
+- name: Pre-configure database
+  template:
+    src: dbconfig-common.conf
+    dest: /etc/dbconfig-common/phpmyadmin.conf
+    owner: root
+    group: root
+    mode: 0600
+
+- name: Installing phpmyadmin
+  apt:
+    name: phpmyadmin
+    install_recommends: no
