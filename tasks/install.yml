@@ -17,3 +17,6 @@
   apt:
     name: phpmyadmin
     install_recommends: no
+
+- name: Installing python-mysqld
+  apt: name=python-mysqldb
